@@ -1,0 +1,14 @@
+# Ignore certificate files
+server.csr
+server.key
+server.cert
+
+# Ignore videos and their directories
+datavideos/
+
+# Ignore node modules
+node_modules/
+tele-bot telegram-bot/node_modules
+videolinks/node_modules
+
+# Add any additional files or directories you want to ignore here
