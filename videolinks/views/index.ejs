@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video Categories</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <h1>Available Video Categories</h1>
+  <% Object.keys(categories).forEach(category => { %>
+    <h2><%= category %></h2>
+    <ul>
+      <% categories[category].forEach(video => { %>
+        <li>
+          <a href="/<%= category %>/<%= video %>">
+            <img src="/thumbnails/<%= category %>_<%= video %>.png" alt="<%= video %> thumbnail" style="width: 120px; height: 90px;">
+            <%= video %>
+          </a>
+        </li>
+      <% }) %>
+    </ul>
+  <% }) %>
+</body>
+</html>
